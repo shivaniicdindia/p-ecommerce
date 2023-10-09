@@ -21,11 +21,4 @@ jobs:
       - name: Install dependencies
         run: npm install  # Customize for your project's build system
 
-      - name: Build and Test
-        run: npm test  # Customize for your project's build and test commands
-
-      - name: Deploy to Production
-        if: success()  # Deploy only if previous steps succeeded
-        run: |
-          # Add your deployment commands here
-          # For example, deploy to a server or cloud service
+  
