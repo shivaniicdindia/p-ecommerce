@@ -1,5 +1,5 @@
 const app = require("./app")
-const dotenv = require("dotenv");
+// const dotenv = require("dotenv");
 const connectDatabase = require('./config/database');
 
 
@@ -10,7 +10,12 @@ process.on("uncaughtException", err => {
     console.log(`shutting down the server due to uncaught exception rejection`);
 })
 
-dotenv.config({ path: "backend/config/config.env" });
+
+if(process.env.NODE_ENV!=="PRODUCTION"){
+    require("dotenv").config({path:"backend/config/config.env"})
+}
+
+
 // connection database
 connectDatabase();
 const server = app.listen(process.env.PORT, (res) => {
