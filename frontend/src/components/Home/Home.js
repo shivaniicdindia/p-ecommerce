@@ -14,8 +14,7 @@ const Home = () => {
 
 
   return (
-
-    < >
+    <>
       <div className="banner">
         <p>Welcome to Ecommerce</p>
         <h1>FIND AMAZING PRODUCTS BELOW</h1>
